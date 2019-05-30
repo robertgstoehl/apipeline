@@ -22,6 +22,8 @@ pipeline {
       steps {
         input(message: 'Promote to Production?', ok: 'Promote')
         sh 'echo "deploy production..."'
+        echo 'ohoh'
+        input 'seriously?'
       }
     }
   }
