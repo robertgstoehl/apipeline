@@ -14,13 +14,13 @@ pipeline {
     }
     stage('Deploy to staging env') {
       steps {
-        input 'rly?'
+        input(message: 'Promote to Stage?', ok: 'Promote')
         sh 'echo "deploy staging..."'
       }
     }
     stage('Deploy to production env') {
       steps {
-        input 'rly?'
+        input(message: 'Promote to Production?', ok: 'Promote')
         sh 'echo "deploy production..."'
       }
     }
