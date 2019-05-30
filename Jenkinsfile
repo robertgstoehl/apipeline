@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'echo "do some maven magic"'
         sh '''echo "something like mvn fat-jar"
-while true; do sleep 1; echo "working..."; done
+for i in {0..10}; do sleep 1; echo "working... (${i}/10)"; done
 echo "done"'''
       }
     }
