@@ -4,7 +4,9 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo "do some maven magic"'
-        sh 'echo "something like mvn fat-jar"'
+        sh '''echo "something like mvn fat-jar"
+while true; do sleep 1; echo "working..."; done
+echo "done"'''
       }
     }
     stage('Verify') {
